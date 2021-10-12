@@ -10,7 +10,6 @@ namespace Logica
     {
         private ManejoConexion Conexion;
         private PagoRepository repository;
-
         public PagoService(string conexionString)
         {
 
