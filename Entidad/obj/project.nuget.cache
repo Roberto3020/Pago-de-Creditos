@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HEAjg4GZzH2C7Hs4Y0Y2Ds9/fMgabf8ihr3izjGtsScLmayhiQ95pduJAJU9WppCiybUhemrBlRG3zKjq4eYSg==",
+  "dgSpecHash": "W6DH0rcB7xx7Fmr37G0LgYAztg/kKFmGbZVUyEYWi031MNO3eS3WS2lgHUTQYoHvtuTSxTvnRDX9ML463OMgRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Roberto\\Desktop\\Programacion-web\\Creditos\\Entidad\\Entidad.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Roberto\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

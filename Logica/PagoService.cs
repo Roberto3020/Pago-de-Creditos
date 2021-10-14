@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Contracts;
+﻿using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System;
 using Datos;
 using Entidad;
@@ -8,30 +9,23 @@ namespace Logica
 {
     public class PagoService
     {
-        private ManejoConexion Conexion;
-        private PagoRepository repository;
-        public PagoService(string conexionString)
+        private readonly PagoContext _context;
+        public PagoService(PagoContext context)
         {
-
-            Conexion = new ManejoConexion(conexionString);
-            repository = new PagoRepository(Conexion);
+            _context = context;
         }
 
         public PagoGuardarRespose Guardar(Pago pago)
         {
             try
             {
-                Conexion.Open();
-                repository.Guardar(pago);
+                _context.Pagos.Add(pago);
+                _context.SaveChanges();
                 return new PagoGuardarRespose(pago);
             }
             catch (Exception e)
             {
                 return new PagoGuardarRespose("Error al guardar " + e.Message);
-            }
-            finally
-            {
-                Conexion.Close();
             }
         }
     }
